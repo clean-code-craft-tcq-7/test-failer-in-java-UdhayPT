@@ -4,7 +4,6 @@ public class AlerterTest {
 
 	@Test
 	public void testSuccessAlertInCelcius() {
-		// Assuming till 150 its fine
 		Alerter.alertInCelcius(150.4f);
 		Alerter.alertInCelcius(33.6f);
 		assert Alerter.alertFailureCount == 0;

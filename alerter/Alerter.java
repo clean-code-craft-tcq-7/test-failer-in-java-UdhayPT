@@ -6,7 +6,11 @@ public class Alerter {
         // Return 200 for ok
         // Return 500 for not-ok
         // stub always succeeds and returns 200
-        return 200;
+        // Assuming till 158 F / 70 C, its fine
+        if(celcius < 70) {
+        	return 200;
+        }
+        return 500;
     }
     static void alertInCelcius(float farenheit) {
         float celcius = (farenheit - 32) * 5 / 9;
@@ -16,7 +20,7 @@ public class Alerter {
             // let us keep a count of failures to report
             // However, this code doesn't count failures!
             // Add a test below to catch this bug. Alter the stub above, if needed.
-            alertFailureCount += 0;
+            alertFailureCount += 1;
         }
     }
     public static void main(String[] args) {
